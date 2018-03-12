@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="http://requirejs.org/docs/release/2.1.11/minified/require.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <form action="" method="POST" id="card-form">
+      <span class="card-errors"></span>
+      <div>
+        <label>
+          <span>Nombre del tarjetahabiente</span>
+          <input type="text" size="20" data-conekta="card[name]">
+        </label>
+      </div>
+      <div>
+        <label>
+          <span>Número de tarjeta de crédito</span>
+          <input type="text" size="20" data-conekta="card[number]">
+        </label>
+      </div>
+      <div>
+        <label>
+          <span>CVC</span>
+          <input type="text" size="4" data-conekta="card[cvc]">
+        </label>
+      </div>
+      <div>
+        <label>
+          <span>Fecha de expiración (MM/AAAA)</span>
+          <input type="text" size="2" data-conekta="card[exp_month]">
+        </label>
+        <span>/</span>
+        <input type="text" size="4" data-conekta="card[exp_year]">
+      </div>
+      <button type="submit">Crear token</button>
+    </form>
+
+
+
+  <script src="app.js" type="text/javascript">
+  </script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.conekta.io/js/latest/conekta.js"></script>
+
+  </body>
+</html>
