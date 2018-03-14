@@ -1,43 +1,49 @@
-var requirejs = require('requirejs');
+// const uuidv1 = require('uuid/v1');
+// uuidv1();
 
-requirejs.config({
-    "baseUrl": "index.html",
-    "paths": {
-      "app": "../app",
-      "jquery": "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min"
-    }
+// const requirejs = require('requirejs');
+//
+// requirejs.config({
+//     "baseUrl": "index.html",
+//     "paths": {
+//       "app": "../app",
+//       "jquery": "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min"
+//     }
+// });
+//
+// // Load the main app module to start the app
+// requirejs(["app"]);
+//
+// requirejs.config({
+//     //Pass the top-level main.js/index.js require
+//     //function to requirejs so that node modules
+//     //are loaded relative to the top-level JS file.
+//     nodeRequire: require
+
+// });
+//
+// requirejs(['foo', 'bar'],
+// function   (foo,   bar) {
+//     //foo and bar are loaded according to requirejs
+//     //config, but if not found, then node's require
+//     //is used to load the module.
+// });
+
+// require(['conekta'], function (conekta) {
+// });
+
+define(function (require) {
+    var namedModule = require('conekta');
+    conekta.api_key = 'CtTiutDz9Zd6Wbqs5S9xUGw';
+    conekta.locale = 'es'
 });
+// var conekta = require('conekta');
 
-// Load the main app module to start the app
-requirejs(["app"]);
-
-requirejs.config({
-    //Pass the top-level main.js/index.js require
-    //function to requirejs so that node modules
-    //are loaded relative to the top-level JS file.
-    nodeRequire: require
-});
-
-requirejs(['foo', 'bar'],
-function   (foo,   bar) {
-    //foo and bar are loaded according to requirejs
-    //config, but if not found, then node's require
-    //is used to load the module.
-});
-
-var conekta = require('conekta');
-
-conekta.api_key = 'CtTiutDz9Zd6Wbqs5S9xUGw';
-conekta.locale = 'es';
+;
 
 
 // conekta.setPublicKey("key_CtTiutDz9Zd6Wbqs5S9xUGw");
 
-Conekta.getPublicKey();
-
-Conekta.setLanguage("es");          // "en" para inglés
-
-Conekta.getLanguage();
 
 var successResponseHandler = function(token) {
   // Do something on sucess
@@ -69,3 +75,5 @@ var successResponseHandler = function(token) {
      return false;
    });
  });
+
+ // console.log(order);
